@@ -1,4 +1,4 @@
-Subscription Analyzer - README
+#Subscription Analyzer - README
 Live URLs
 Component	URL
 Frontend	https://subscription-analyzer-git-main-aaa3525s-projects.vercel.app/login
