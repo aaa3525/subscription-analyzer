@@ -1,0 +1,3 @@
+﻿const mongoose = require('mongoose');
+const SubscriptionSchema = new mongoose.Schema({ user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, name: { type: String, required: true }, category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' }, cost: { type: Number, required: true }, billingCycle: { type: String, enum: ['monthly','yearly','weekly'], default: 'monthly' }, startDate: { type: Date, default: Date.now }, usageFrequency: { type: Number, default: 0, min: 0, max: 100 }, isActive: { type: Boolean, default: true }, classification: { type: String, enum: ['essential','waste','expensive','infrequent','good_value','pending'], default: 'pending' } });
+module.exports = mongoose.model('Subscription', SubscriptionSchema);
